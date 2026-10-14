@@ -1,0 +1,197 @@
+/* Design System - White & Blue Ocean Theme (Toko Renang Louzaawave) */
+
+:root {
+    --bg-main: #f8fafc;
+    --sidebar-bg: #ffffff;
+    --sidebar-brand-bg: #ffffff;
+    --sidebar-text: #475569;
+    --sidebar-active-bg: #0284c7;
+    --sidebar-hover-bg: #e0f2fe;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --primary-blue: #0284c7;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--bg-main);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+#wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* White & Blue Sidebar Navigation - 100% Locked Sidebar */
+#sidebar-wrapper {
+    width: 230px;
+    height: 100vh;
+    flex-shrink: 0;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+#sidebar-wrapper .sidebar-brand {
+    padding: 1.1rem 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    background-color: var(--sidebar-brand-bg);
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#sidebar-wrapper .nav-link {
+    color: var(--sidebar-text);
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0.25rem 0.75rem;
+    transition: all 0.15s ease-in-out;
+}
+
+#sidebar-wrapper .nav-link:hover {
+    color: var(--primary-blue);
+    background-color: var(--sidebar-hover-bg);
+}
+
+#sidebar-wrapper .nav-link.active {
+    color: #ffffff;
+    background-color: var(--sidebar-active-bg);
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(2, 132, 199, 0.3);
+}
+
+/* Page Content Wrapper - Independent Vertical Scroll */
+#page-content-wrapper {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Top Navbar */
+.top-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+/* Aesthetic Cards */
+.card-aesthetic {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+.card-stat {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-stat-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+.card-stat-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+}
+
+/* Table Styling - Clean Spacing & Proper Cell Padding */
+.table-aesthetic {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.table-aesthetic th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.9rem 1.4rem;
+    white-space: nowrap;
+}
+
+.table-aesthetic td {
+    padding: 0.85rem 1.4rem;
+    vertical-align: middle;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Card Header inside card-aesthetic */
+.card-aesthetic .card-header {
+    padding: 0.85rem 1.4rem;
+}
+
+/* Card Body inside card-aesthetic */
+.card-aesthetic .card-body {
+    padding: 1rem 1.4rem;
+}
+
+/* Custom UI Elements & Badges */
+.badge {
+    padding: 0.45em 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.btn {
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    border-color: #cbd5e1;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
